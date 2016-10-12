@@ -1,5 +1,5 @@
 # Metal skupine v prostoru in času
-## Project Programiranje 1
+## Projekt pri predmetu Programiranje 1
 ## Vir podatkov: 
 [Encyclopaedia Metallum](http://www.metal-archives.com/), najbolj obsežen poskus arhiviranja podatkov o _vsem_ na metal sceni.
 ## Zajeti podatki: 
