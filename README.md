@@ -8,6 +8,8 @@
 * podzvrst metala, ki jo izvajajo;
 * njihov status (*Active/On hold/Split-up/Unknown/Changed name/Disputed*)
 
+Opomba: ker je 'metalskost' nekaterih skupin kontroverzna in jih posledično ni v arhivih, sem jih za vzorec vnesla ročno.
+
 ## Predvidena analiza:
 * kdaj število novih skupin na leto doseže maksimum;
 * v kateri državi je največ aktivnih skupin;
