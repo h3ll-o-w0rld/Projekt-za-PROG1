@@ -10,14 +10,7 @@ statusi = celotna_tabela['status']
 drzave = celotna_tabela['drz']
 osnovna_tabela = celotna_tabela['leto']
 
-osn_slovarji = [
-    {'ime': line['ime'], 'leto': line['leto']} for line in osnovna_tabela
-    ]
-
-with open('osnovno.csv', 'w') as csv_dat:
-    writer = csv.DictWriter(csv_dat, fieldnames=['ime', 'leto'])
-    writer.writeheader()
-    for slovar in osnovna_tabela:
-        writer.writerow(slovar)
+s=['ime', 'leto']
+osnovna_tabela.to_csv('osnovno.csv', cols=2, header=s)
 
 
