@@ -5,22 +5,26 @@ import os
 import orodja
 
 pot = 'csv/'
-datoteka = pot + 'metal_skupine.csv'
-celotna_tabela = pd.DataFrame.from_csv(datoteka)
+datoteka = pot + 'metal_skupine_id.csv'
+celotna_tabela = pd.read_csv(datoteka)
 
 
 def csv_iz_tabele(pot, tabela, stolpci=None):
-    os.makedirs(pot)
-    tabela.to_csv(pot, stolpci)
+    if not os.path.isfile(datoteka):
+        os.makedirs(pot)
+        tabela.to_csv(pot, stolpci)
 
-status = {1: 'Active', 2: 'On hold', 3: 'Split-up', 4: 'Unknown', 5: 'Changed name', 6: 'Disputed'}
-#statusi = pd.DataFrame.from_dict(status)
-orodja.zapisi_tabelo(status, ['oznaka', 'pomen'], pot + 'statusi.csv')
-statusi_skupin = pd.concat([celotna_tabela['status'], status], axis=1)['status', 'pomen']
+temp = {1: 'Active', 2: 'On hold', 3: 'Split-up', 4: 'Unknown', 5: 'Changed name', 6: 'Disputed'}
+status = []
+for oznaka, pomen in temp.items():
+    status += [{'status': oznaka, 'pomen': pomen}]
+orodja.zapisi_tabelo(status, ['status', 'pomen'], pot + 'statusi.csv')
+statusi = pd.read_csv(pot + 'statusi.csv')
+statusi_skupin = pd.concat([celotna_tabela['status'], statusi], axis=1)['status', 'pomen']
 
-csv_iz_tabele(pot + 'metal_skupine.csv', celotna_tabela['ime', 'leto'])
-csv_iz_tabele(pot + 'zvrsti_skupin.csv', celotna_tabela['zvrst'])
-csv_iz_tabele(pot + 'statusi_skupin.csv', statusi_skupin)
+csv_iz_tabele(pot + 'metal_skupine_id.csv', celotna_tabela[['ime', 'leto']], stolpci=['ime', 'leto'])
+csv_iz_tabele(pot + 'zvrsti_skupin.csv', celotna_tabela['zvrst'], stolpci='zvrst')
+csv_iz_tabele(pot + 'statusi_skupin.csv', statusi_skupin, stolpci='status')
 
 
 
