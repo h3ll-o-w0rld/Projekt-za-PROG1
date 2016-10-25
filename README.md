@@ -8,7 +8,7 @@
 * podzvrst metala, ki jo izvajajo;
 * njihov status (*Active/On hold/Split-up/Unknown/Changed name/Disputed*)
 
-Opomba: zaradi prevelike količine strani sem se omejila sem se na prvih 125 278 možnih ID-jev (vsaka skupina ima svoj ID, a niso vsi v uporabi). Podatke sem tako zbrala za skoraj 60 000 skupin, od teh je 16 dodanih *na roke*.
+Opomba: zaradi prevelike količine strani sem se omejila sem se na prvih 125 278 možnih ID-jev (vsaka skupina ima svoj ID, a niso vsi v uporabi). Podatke sem tako zbrala za skoraj 60 000 skupin, od teh je 16 dodanih "na roke".
 
 ## Predvidena analiza:
 * kdaj število novih skupin na leto doseže maksimum;
