@@ -1,7 +1,7 @@
 # Metal skupine v prostoru in času
 ## Projekt pri predmetu Programiranje 1
 ## Vir podatkov: 
-[Encyclopaedia Metallum](http://www.metal-archives.com/), najbolj obsežen poskus arhiviranja podatkov o skupinah z vsaj enim izda
+[Encyclopaedia Metallum](http://www.metal-archives.com/), najbolj obsežen poskus arhiviranja podatkov o skupinah z vsaj enim izdanim albumom
 ## Zajeti podatki: 
 * imena skupin;
 * leto ter država njihovega nastanka;
