@@ -12,6 +12,6 @@ Opomba: zaradi prevelike količine strani sem se omejila sem se na prvih 125 278
 
 ## Predvidena analiza:
 * kdaj je število novih skupin na leto doseglo maksimum;
-* v kateri državi je (bilo) največ aktivnih skupin;
+* v kateri državi je največ aktivnih skupin;
 * kateri žanri so najbolj zastopani ter kdaj so bili najbolj popularni;
 * katera podzvrst je pritegnila največ propadlih skupin.
