@@ -75,8 +75,8 @@ def pocisti_zvrst(niz, vzorec, izjeme):
     return ','.join(seznam_zvrsti)
 
 
-for n in range(14):
-    file = '../proj_csv/dtisoc/dtisoc{:04}.txt'.format(n)
+for n in range(10, 15):
+    file = '../dtisoc/dtisoc{:04}.txt'.format(n)
     with open(file, 'r') as d:
 	    vsebina = d.read()
 	    nove_skupine = re.finditer(regex, vsebina)
@@ -89,7 +89,7 @@ for n in range(14):
 	                         }]
 
 stolpci = ['ime', 'država', 'zvrst', 'leto', 'status']
-izpis = 'metal_skupine1.csv'
+izpis = '../metal_skupine1.csv'
 
 orodja.zapisi_tabelo(sezn_skupin, stolpci, izpis)
 

@@ -6,11 +6,12 @@ import re
 
 naslov = 'http://www.metal-archives.com/band/view/id/'
 
-start = 10 ** 5
+start = 130091 #10 ** 5
+end = 250000 #10 ** 6
 
-for id in range(start, 10**6):
+for id in range(start, end):
     url = naslov + str(id)
-    ime_datoteke = 'data1/{:07}'.format(id)
+    ime_datoteke = '../data1/{:07}'.format(id)
     try:
         print('Shranjujem {}...'.format(url))
         sys.stdout.flush()
